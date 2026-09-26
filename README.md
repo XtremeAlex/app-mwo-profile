@@ -1,6 +1,6 @@
-# mwo_app_profile
+# xtr-profile-ui
 
-Interfaccia utente per la gestione profili (modulo `mwo_ui`): frontend Java EE che consuma le API di `api-mwo-profile`.
+Interfaccia utente per la gestione profili: frontend Java EE che consuma le API di `xtr-profile-api`.
 
 ## Stack tecnologico
 
@@ -20,8 +20,8 @@ L'artefatto prodotto va rilasciato su un application server compatibile Java EE 
 
 Coppia backend/frontend:
 
-- `api-mwo-profile` — API / controller
-- `mwo_app_profile` — questo modulo: interfaccia utente
+- `xtr-profile-api` — API / controller
+- `xtr-profile-ui` — questo modulo: interfaccia utente
 
 ## License
 
