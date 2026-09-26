@@ -1,6 +1,6 @@
-# xtr-profile-ui
+# app-mwo-profile
 
-Interfaccia utente per la gestione profili: frontend Java EE che consuma le API di `xtr-profile-api`.
+Interfaccia utente per la gestione profili di **MechWarrior Online (MWO)**: frontend Java EE che consuma le API di `api-mwo-profile`.
 
 ## Stack tecnologico
 
@@ -20,8 +20,8 @@ L'artefatto prodotto va rilasciato su un application server compatibile Java EE 
 
 Coppia backend/frontend:
 
-- `xtr-profile-api` — API / controller
-- `xtr-profile-ui` — questo modulo: interfaccia utente
+- `api-mwo-profile` — API / controller
+- `app-mwo-profile` — questo modulo: interfaccia utente
 
 ## License
 
