@@ -2,7 +2,7 @@
 
 Interfaccia utente per la gestione profili (modulo `mwo_ui`): frontend Java EE che consuma le API di `api-mwo-profile`.
 
-## Stack
+## Stack tecnologico
 
 - Java EE (JAX-RS / RESTEasy)
 - Maven
@@ -22,10 +22,6 @@ Coppia backend/frontend:
 
 - `api-mwo-profile` — API / controller
 - `mwo_app_profile` — questo modulo: interfaccia utente
-
-## License
-
-Vedi `LICENSE`.
 
 ## Contatti
 
