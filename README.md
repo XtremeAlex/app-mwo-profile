@@ -1,12 +1,27 @@
 # app-mwo-profile
 
-Interfaccia utente per la gestione profili di **MechWarrior Online (MWO)**: frontend Java EE che consuma le API di `api-mwo-profile`.
+> Stato: archiviato. Progetto del 2017, non più mantenuto. Legge i dati facendo
+> scraping delle pagine del profilo su mwomercs.com, quindi con buona
+> probabilità non funziona più con il sito attuale (non verificato). Resta
+> online come riferimento.
 
-## Stack tecnologico
+Una piccola applicazione desktop per salvare le statistiche del tuo profilo di
+**MechWarrior Online (MWO)**. Premi il pulsante di login, inserisci le
+credenziali del tuo account MWO, e l'app legge le pagine del profilo su
+mwomercs.com (dati base, mech, armi, mappe, modalità) e ti chiede dove salvare
+il risultato in un file `.json`.
 
-- Java EE (JAX-RS / RESTEasy)
-- Maven
-- JSON (json-simple)
+Fa lo stesso lavoro di [`api-mwo-profile`](https://github.com/XtremeAlex/api-mwo-profile),
+ma in locale, senza passare dal servizio REST.
+
+Da sapere, visto che è codice del 2017: il client HTTP disattiva la verifica
+dei certificati TLS.
+
+## Stack
+
+- Java 8, interfaccia Swing (look and feel Nimbus)
+- jsoup per leggere le pagine, json-simple e Gson
+- Maven, packaging `jar`
 
 ## Build
 
@@ -14,19 +29,18 @@ Interfaccia utente per la gestione profili di **MechWarrior Online (MWO)**: fron
 mvn clean package
 ```
 
-L'artefatto prodotto va rilasciato su un application server compatibile Java EE (es. WildFly / JBoss).
+Il `jar` prodotto non dichiara la classe principale nel manifest e non include
+le dipendenze: il modo più semplice per avviare l'app è lanciare
+`com.xa.mwo_ui.Main` dall'IDE.
 
-## Contesto
+## Progetti collegati
 
-Coppia backend/frontend:
+- [`api-mwo-profile`](https://github.com/XtremeAlex/api-mwo-profile): il servizio REST
+- `app-mwo-profile`: questa, l'applicazione desktop
 
-- `api-mwo-profile` — API / controller
-- `app-mwo-profile` — questo modulo: interfaccia utente
-
-## License
-
+## Licenza
 Distribuito sotto licenza MIT. Vedi il file [`LICENSE`](LICENSE). Ogni riuso deve mantenere l'attribuzione all'autore.
 
 ## Contatti
 
-Andrei Alexandru Dabija — [LinkedIn](https://www.linkedin.com/in/andrei-alexandru-dabija/) — [github.com/XtremeAlex](https://github.com/XtremeAlex)
+Andrei Alexandru Dabija · [LinkedIn](https://www.linkedin.com/in/andrei-alexandru-dabija/) · [github.com/XtremeAlex](https://github.com/XtremeAlex)
